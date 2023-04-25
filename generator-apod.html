@@ -1,0 +1,46 @@
+<label for="dateInput">Saisissez une date (format YYYY-MM-DD):</label>
+<input type="text" id="dateInput">
+<button id="submitButton">Rechercher</button>
+<div id="apodData"></div>
+
+<script>
+const submitButton = document.getElementById('submitButton');
+submitButton.addEventListener('click', getAPOD);
+
+function getAPOD() {
+  const dateInput = document.getElementById('dateInput').value;
+  const url = `https://api.nasa.gov/planetary/apod?date=${dateInput}&api_key=0cNIduzhdUtxgM7e6NhAg8w3Ao6tCpWlYZm4bUnd`;
+
+  fetch(url)
+    .then(response => response.json())
+    .then(data => {
+      displayAPOD(data);
+    })
+    .catch(error => {
+      console.error('Error:', error);
+    });
+}
+
+function displayAPOD(apod) {
+  const apodData = document.getElementById('apodData');
+  console.log (apod);
+  if (apod.code === 400)
+  {
+  apodData.innerHTML =`
+    <div class="bloc_api">
+    <h2>La saisie de la date est incorrecte.</h2>
+    <p>Merci d'entrer une date au format YYYY-MM-DD comme par exemple 2000-01-01.
+    <img src="http://www.astropixels.online/wp-content/uploads/2023/03/127255-cute-astronaut-looking-star-with-telescope-1.gif" alt="Erreur dans la saisie de la date">
+    </div>`;
+  }
+  else
+  {
+  apodData.innerHTML =`
+    <div class="bloc_api">
+    <h2>${apod.title}</h2>
+    <img src="${apod.url}" alt="${apod.title}">
+    <p>${apod.explanation}</p>
+    </div>`;
+    }
+  }
+</script>
