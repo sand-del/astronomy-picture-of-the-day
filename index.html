@@ -1,21 +1,16 @@
-<h2 id="title"></h2>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <h2 id="title"></h2>
 <h3><span id="date"></span></h3>
 <img id="pic_apod" src="" alt="NASA Picture Of The Day" width="100%">
 <p id="explanation"></p>
-
-<script>var req = new XMLHttpRequest();
-var url = "https://api.nasa.gov/planetary/apod?api_key=";
-var api_key = "5B6oJsSCQyekXZvNOKpsUhRPl1e7FHqjIAyHpybk";
-
-req.open("GET", url + api_key);
-req.send();
-
-req.addEventListener("load", function(){
-	if(req.status == 200 && req.readyState == 4){
-  	var response = JSON.parse(req.responseText);
-    document.getElementById("title").textContent = response.title;
-    document.getElementById("date").textContent = response.date;
-    document.getElementById("pic_apod").src = response.url;
-    document.getElementById("explanation").textContent = response.explanation;
-  }
-})</script>
+</body>
+</html>
+<script type="text/javascript" src="scripts.js"></script>
