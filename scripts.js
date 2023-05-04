@@ -13,4 +13,4 @@ req.addEventListener("load", function(){
     document.getElementById("pic_apod").src = response.url;
     document.getElementById("explanation").textContent = response.explanation;
   }
-}
+})

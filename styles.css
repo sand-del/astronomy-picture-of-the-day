@@ -1,0 +1,72 @@
+@import url(https://fonts.googleapis.com/css?family=Poppins:400,500,600,700,300);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
+.section{
+    display:flex;
+    flex:auto;
+    align-items: center;
+    margin:0 5% 0 5%;
+    background-color: white;
+    justify-content: center;
+    -webkit-box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+    border-radius:10px;
+}
+
+.section-droite{
+    width:40%;
+    margin: 1.5em;
+    -webkit-box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+    box-shadow: 10px 10px 40px 0px rgba(0,0,0,0.75);
+} 
+
+.section-gauche{
+    width:30%;
+    margin: 1.5em;
+}
+
+.section-gauche img{
+    max-width: 100%;
+    max-height: 100%;
+}
+
+#title{
+    text-transform: uppercase;
+    line-height: 1;
+    font-size: xx-large;
+    background: #7E0AE7;
+background: radial-gradient(circle farthest-corner at center center, #7E0AE7 0%, #3FC2AA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+body{
+    font-family: "Poppins", sans-serif;
+    background-color: rgb(230, 228, 231);
+}
+
+p{
+    color:#AEACAB;
+    text-align: justify;
+}
+
+h1{
+    /*position:relative;
+    top: 1.3em;*/
+    text-transform: uppercase;
+    background: #7E0AE7;
+    background: linear-gradient(to bottom, #7E0AE7 0%, #3FC2AA 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    opacity: 0.4;
+    font-size: 5em;
+    margin: 0;
+}
+
+.entete{
+    text-align: center;
+}

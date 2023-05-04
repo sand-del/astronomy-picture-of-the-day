@@ -5,12 +5,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="normalize.css" type="text/css">
+  <link rel="stylesheet" href="styles.css" type="text/css">
 </head>
+
 <body>
-  <h2 id="title"></h2>
-<h3><span id="date"></span></h3>
-<img id="pic_apod" src="" alt="NASA Picture Of The Day" width="100%">
-<p id="explanation"></p>
+  <div class="entete">
+  <h1>Astronomy Picture Of the Day</h1>
+</div>
+  <div class="section">
+    <div class="section-gauche">
+      <h2 id="title"></h2>
+      <span id="date"></span>
+      <p id="explanation"></p>
+      <button onclick="window.location.href = 'generator-apod.html'">More pictures ?</button>
+      <div><a href="about.html">About</a></div>
+    </div>
+
+    <div class="section-droite">
+      <img id="pic_apod" src="" alt="NASA Picture Of The Day" width="100%">
+    </div>
+  </div>
 </body>
+
 </html>
 <script type="text/javascript" src="scripts.js"></script>
